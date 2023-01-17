@@ -13,7 +13,8 @@ namespace RejexAssignment
         public static string Reg_pattern2 = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string Reg_pattern3 = "^(abc)(.[A-Za-z]+)*@(bl).(co)([.][a-z]{2,})?$";
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
-        public static string Reg_pattern5 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}([0-9]+)?$";
+
+        public static string Reg_pattern5 = "^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$";
         public static void Main(String[] args)
         {
             Console.WriteLine("enter your First  name");
@@ -64,6 +65,7 @@ namespace RejexAssignment
             }
             else
                 Console.WriteLine("pattern mobile number  is wrong");
+
             if (val5)
             {
                 Console.WriteLine("Pattern is correct for given password : {0}", pwd);
